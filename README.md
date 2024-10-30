@@ -11,3 +11,6 @@ docker run -d --name discord-bot my-discord-bot
 docker images -a
 
 查看运行中的容器
+
+
+不要改变discord.js的版本，新的discord api将不再支持账号token登录
