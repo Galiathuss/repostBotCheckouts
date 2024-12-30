@@ -1,11 +1,37 @@
 # repostBotCheckouts
 
-打包镜像
+## config.json
+
+将YOUR_DISCOR_DTOKEN替换成账号的DISCORD TOKEN
+
+```json
+{
+    "token": "YOUR_DISCOR_DTOKEN"
+}
+```
+
+## hookandid.txt
+
+```txt
+[需要被转发的频道id] [需要发送的webhook] [备注]
+例如：
+1293551606402383923 https://discord.com/api/webhooks/1300480535212333886/RdJNETSLHznu8ZLWDtzzG1jgk745k3o2sUtiWUdXm5KsjlRfSyfDQBzYPTRqc1mtSCPW lazada-my
+1293551887118897142 https://discord.com/api/webhooks/1300480601533463063/JLu5ls4qhpudhRGNwX05-Gi2ULoYRIDmz6lxB3OK6p8TrvAvYs71LmVH0YG2Xkt51h4m lazada-th
+1297728824632676362 https://discord.com/api/webhooks/13019478508854396439/YqQCauCFGKpCb3D95OgWp73V7Aa39UfAX7r8WTjhFG2TO0QmCoUGEBLktpMkDHVGl47j lazada-vn
+
+```
+
+## 打包镜像
+
+```bash
 docker build -t my-discord-bot .
+```
 
-运行容器
+## 运行容器
 
+```bash
 docker run -d --name discord-bot my-discord-bot
+```
 
 ## 不要改变discord.js的版本，新的discord api将不再支持账号token登录
 
